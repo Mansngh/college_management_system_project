@@ -19,7 +19,7 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UserRole {
+public class UserRole extends BaseEntity {
 
 	@ManyToOne(targetEntity = User.class,fetch = FetchType.LAZY)
 	@JoinColumn(name = "user_id",referencedColumnName = "id")
